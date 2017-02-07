@@ -7,17 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00EA121B1E49FB4100D73B95 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA121A1E49FB4100D73B95 /* ChannelListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		00EA121D1E4A00E500D73B95 /* CreateChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA121C1E4A00E500D73B95 /* CreateChannelCell.swift */; settings = {ASSET_TAGS = (); }; };
+		00EA121F1E4A028900D73B95 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA121E1E4A028900D73B95 /* ChatViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		00F05C461E49EB56005C3BFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F05C451E49EB56005C3BFD /* AppDelegate.swift */; };
-		00F05C481E49EB56005C3BFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F05C471E49EB56005C3BFD /* ViewController.swift */; };
+		00F05C481E49EB56005C3BFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F05C471E49EB56005C3BFD /* LoginViewController.swift */; };
 		00F05C4B1E49EB56005C3BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F05C491E49EB56005C3BFD /* Main.storyboard */; };
 		00F05C4D1E49EB56005C3BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F05C4C1E49EB56005C3BFD /* Assets.xcassets */; };
 		00F05C501E49EB56005C3BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F05C4E1E49EB56005C3BFD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00EA121A1E49FB4100D73B95 /* ChannelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
+		00EA121C1E4A00E500D73B95 /* CreateChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelCell.swift; sourceTree = "<group>"; };
+		00EA121E1E4A028900D73B95 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		00F05C421E49EB56005C3BFD /* RTChatEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTChatEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F05C451E49EB56005C3BFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		00F05C471E49EB56005C3BFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		00F05C471E49EB56005C3BFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		00F05C4A1E49EB56005C3BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		00F05C4C1E49EB56005C3BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00F05C4F1E49EB56005C3BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,11 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				00F05C451E49EB56005C3BFD /* AppDelegate.swift */,
-				00F05C471E49EB56005C3BFD /* ViewController.swift */,
+				00F05C471E49EB56005C3BFD /* LoginViewController.swift */,
+				00EA121A1E49FB4100D73B95 /* ChannelListViewController.swift */,
 				00F05C491E49EB56005C3BFD /* Main.storyboard */,
+				00EA121E1E4A028900D73B95 /* ChatViewController.swift */,
 				00F05C4C1E49EB56005C3BFD /* Assets.xcassets */,
 				00F05C4E1E49EB56005C3BFD /* LaunchScreen.storyboard */,
 				00F05C511E49EB56005C3BFD /* Info.plist */,
+				00EA121C1E4A00E500D73B95 /* CreateChannelCell.swift */,
 			);
 			path = RTChatEx;
 			sourceTree = "<group>";
@@ -134,8 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F05C481E49EB56005C3BFD /* ViewController.swift in Sources */,
+				00EA121B1E49FB4100D73B95 /* ChannelListViewController.swift in Sources */,
+				00F05C481E49EB56005C3BFD /* LoginViewController.swift in Sources */,
 				00F05C461E49EB56005C3BFD /* AppDelegate.swift in Sources */,
+				00EA121F1E4A028900D73B95 /* ChatViewController.swift in Sources */,
+				00EA121D1E4A00E500D73B95 /* CreateChannelCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +297,7 @@
 				00F05C561E49EB56005C3BFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
