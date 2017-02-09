@@ -10,17 +10,24 @@
 		00EA121B1E49FB4100D73B95 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA121A1E49FB4100D73B95 /* ChannelListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		00EA121D1E4A00E500D73B95 /* CreateChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA121C1E4A00E500D73B95 /* CreateChannelCell.swift */; settings = {ASSET_TAGS = (); }; };
 		00EA121F1E4A028900D73B95 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA121E1E4A028900D73B95 /* ChatViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		00EA12251E4B03E700D73B95 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA12241E4B03E700D73B95 /* Channel.swift */; settings = {ASSET_TAGS = (); }; };
+		00EA12291E4B04A000D73B95 /* RTChatEx.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 00EA12281E4B04A000D73B95 /* RTChatEx.entitlements */; settings = {ASSET_TAGS = (); }; };
+		00EA122B1E4B1A6700D73B95 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00EA122A1E4B1A6700D73B95 /* GoogleService-Info.plist */; settings = {ASSET_TAGS = (); }; };
 		00F05C461E49EB56005C3BFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F05C451E49EB56005C3BFD /* AppDelegate.swift */; };
 		00F05C481E49EB56005C3BFD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F05C471E49EB56005C3BFD /* LoginViewController.swift */; };
 		00F05C4B1E49EB56005C3BFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F05C491E49EB56005C3BFD /* Main.storyboard */; };
 		00F05C4D1E49EB56005C3BFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F05C4C1E49EB56005C3BFD /* Assets.xcassets */; };
 		00F05C501E49EB56005C3BFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00F05C4E1E49EB56005C3BFD /* LaunchScreen.storyboard */; };
+		A5BFFA758FAF72CB64178B0D /* Pods_RTChatEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CC5001F0922023BFAD67D71 /* Pods_RTChatEx.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00EA121A1E49FB4100D73B95 /* ChannelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
 		00EA121C1E4A00E500D73B95 /* CreateChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelCell.swift; sourceTree = "<group>"; };
 		00EA121E1E4A028900D73B95 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		00EA12241E4B03E700D73B95 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		00EA12281E4B04A000D73B95 /* RTChatEx.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = RTChatEx.entitlements; sourceTree = "<group>"; };
+		00EA122A1E4B1A6700D73B95 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00F05C421E49EB56005C3BFD /* RTChatEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RTChatEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F05C451E49EB56005C3BFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00F05C471E49EB56005C3BFD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +35,9 @@
 		00F05C4C1E49EB56005C3BFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00F05C4F1E49EB56005C3BFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00F05C511E49EB56005C3BFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CC5001F0922023BFAD67D71 /* Pods_RTChatEx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RTChatEx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		549CB3B7D3DA6085839BF902 /* Pods-RTChatEx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTChatEx.release.xcconfig"; path = "Pods/Target Support Files/Pods-RTChatEx/Pods-RTChatEx.release.xcconfig"; sourceTree = "<group>"; };
+		7B6846B64A26DACB7578EB73 /* Pods-RTChatEx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RTChatEx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RTChatEx/Pods-RTChatEx.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +45,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BFFA758FAF72CB64178B0D /* Pods_RTChatEx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00EA12221E4B03A000D73B95 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00F05C471E49EB56005C3BFD /* LoginViewController.swift */,
+				00EA121A1E49FB4100D73B95 /* ChannelListViewController.swift */,
+				00EA121E1E4A028900D73B95 /* ChatViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		00EA12231E4B03D400D73B95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00EA12241E4B03E700D73B95 /* Channel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		00F05C391E49EB56005C3BFD = {
 			isa = PBXGroup;
 			children = (
 				00F05C441E49EB56005C3BFD /* RTChatEx */,
 				00F05C431E49EB56005C3BFD /* Products */,
+				1CCDCBB28601B07A92762E96 /* Pods */,
+				DD046A5C478117FA62A31D7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,17 +91,35 @@
 		00F05C441E49EB56005C3BFD /* RTChatEx */ = {
 			isa = PBXGroup;
 			children = (
+				00EA12281E4B04A000D73B95 /* RTChatEx.entitlements */,
+				00EA12231E4B03D400D73B95 /* Model */,
+				00EA12221E4B03A000D73B95 /* Controllers */,
 				00F05C451E49EB56005C3BFD /* AppDelegate.swift */,
-				00F05C471E49EB56005C3BFD /* LoginViewController.swift */,
-				00EA121A1E49FB4100D73B95 /* ChannelListViewController.swift */,
 				00F05C491E49EB56005C3BFD /* Main.storyboard */,
-				00EA121E1E4A028900D73B95 /* ChatViewController.swift */,
 				00F05C4C1E49EB56005C3BFD /* Assets.xcassets */,
 				00F05C4E1E49EB56005C3BFD /* LaunchScreen.storyboard */,
+				00EA122A1E4B1A6700D73B95 /* GoogleService-Info.plist */,
 				00F05C511E49EB56005C3BFD /* Info.plist */,
 				00EA121C1E4A00E500D73B95 /* CreateChannelCell.swift */,
 			);
 			path = RTChatEx;
+			sourceTree = "<group>";
+		};
+		1CCDCBB28601B07A92762E96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B6846B64A26DACB7578EB73 /* Pods-RTChatEx.debug.xcconfig */,
+				549CB3B7D3DA6085839BF902 /* Pods-RTChatEx.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD046A5C478117FA62A31D7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CC5001F0922023BFAD67D71 /* Pods_RTChatEx.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,9 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00F05C541E49EB56005C3BFD /* Build configuration list for PBXNativeTarget "RTChatEx" */;
 			buildPhases = (
+				113BB858E935CE28CE362BC9 /* [CP] Check Pods Manifest.lock */,
 				00F05C3E1E49EB56005C3BFD /* Sources */,
 				00F05C3F1E49EB56005C3BFD /* Frameworks */,
 				00F05C401E49EB56005C3BFD /* Resources */,
+				4580F9B1BAEC870424895332 /* [CP] Embed Pods Frameworks */,
+				B1C5750303345420336EA76F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,17 +184,68 @@
 			files = (
 				00F05C501E49EB56005C3BFD /* LaunchScreen.storyboard in Resources */,
 				00F05C4D1E49EB56005C3BFD /* Assets.xcassets in Resources */,
+				00EA122B1E4B1A6700D73B95 /* GoogleService-Info.plist in Resources */,
+				00EA12291E4B04A000D73B95 /* RTChatEx.entitlements in Resources */,
 				00F05C4B1E49EB56005C3BFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		113BB858E935CE28CE362BC9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4580F9B1BAEC870424895332 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RTChatEx/Pods-RTChatEx-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1C5750303345420336EA76F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RTChatEx/Pods-RTChatEx-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		00F05C3E1E49EB56005C3BFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00EA12251E4B03E700D73B95 /* Channel.swift in Sources */,
 				00EA121B1E49FB4100D73B95 /* ChannelListViewController.swift in Sources */,
 				00F05C481E49EB56005C3BFD /* LoginViewController.swift in Sources */,
 				00F05C461E49EB56005C3BFD /* AppDelegate.swift in Sources */,
@@ -258,6 +361,7 @@
 		};
 		00F05C551E49EB56005C3BFD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B6846B64A26DACB7578EB73 /* Pods-RTChatEx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RTChatEx/Info.plist;
@@ -269,6 +373,7 @@
 		};
 		00F05C561E49EB56005C3BFD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 549CB3B7D3DA6085839BF902 /* Pods-RTChatEx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RTChatEx/Info.plist;
