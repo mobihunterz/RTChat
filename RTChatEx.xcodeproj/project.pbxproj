@@ -364,10 +364,12 @@
 			baseConfigurationReference = 7B6846B64A26DACB7578EB73 /* Pods-RTChatEx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Paresh Thakor (5P6MR7RY6N)";
 				INFOPLIST_FILE = RTChatEx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.partha.rtchat.RTChatEx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d124059c-cd39-4174-8df9-1933206578c4";
 			};
 			name = Debug;
 		};
@@ -376,10 +378,12 @@
 			baseConfigurationReference = 549CB3B7D3DA6085839BF902 /* Pods-RTChatEx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Paresh Thakor (5P6MR7RY6N)";
 				INFOPLIST_FILE = RTChatEx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.partha.rtchat.RTChatEx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "d124059c-cd39-4174-8df9-1933206578c4";
 			};
 			name = Release;
 		};

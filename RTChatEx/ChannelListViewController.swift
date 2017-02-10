@@ -105,5 +105,15 @@ class ChannelListViewController: UITableViewController {
         }
     }
     
+    // MARK: Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        if let channel = sender as? Channel {
+            let chatvc = segue.destinationViewController as! ChatViewController
+            chatvc.senderDisplayName = senderDisplayName
+            chatvc.channel = channel
+            chatvc.channelRef = channelRef.child(channel.id)
+        }
+    }
     
 }
