@@ -25,6 +25,9 @@ final class ChatViewController: JSQMessagesViewController {
     
     private let imageURLNotSetKey = "NOTSET"
     private var localTyping = false
+    private var photoMessageMap = [String: JSQPhotoMediaItem]()
+    private var updateMessageRefHandle: FIRDatabaseHandle?
+    
     var isTyping: Bool {
         get {
             return localTyping
@@ -45,6 +48,16 @@ final class ChatViewController: JSQMessagesViewController {
     }
     
     // MARK: View Lifecycle
+    
+    deinit {
+        if let refHandle = newMessageRefHandle {
+            messageRef.removeObserverWithHandle(refHandle)
+        }
+        
+        if let refHandle = updateMessageRefHandle {
+            messageRef.removeObserverWithHandle(refHandle)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -150,8 +163,24 @@ final class ChatViewController: JSQMessagesViewController {
             if let id = messageData["senderId"] as String!, let name = messageData["senderName"] as String!, let text = messageData["text"] as String! where text.characters.count > 0 {
                 self.addMessage(id, name: name, text: text)
                 self.finishReceivingMessage()
-            } else {
+            } else if let id = messageData["senderId"] as String!, let photoURL = messageData["photoURL"] as String! {
+                if let mediaItem = JSQPhotoMediaItem(maskAsOutgoing: id == self.senderId) {
+                    self.addPhotoMessage(withId: id, key: snapshot.key, mediaItem: mediaItem)
+                    if photoURL.hasPrefix("gs://") {
+                        self.fetchImageDataAtURL(photoURL, forMediaItem: mediaItem, clearsPhotoMessageMapOnSuccessForKey: nil)
+                    }
+                }
                 print("Error! Could not decode message data.")
+            }
+        })
+        
+        updateMessageRefHandle = messageRef.observeEventType(.ChildAdded, withBlock: {(snapshot) in
+            let key = snapshot.key
+            let messageData = snapshot.value as! Dictionary<String, String>
+            if let photoURL = messageData["photoURL"] as String! {
+                if let mediaItem = self.photoMessageMap[key] {
+                    self.fetchImageDataAtURL(photoURL, forMediaItem: mediaItem, clearsPhotoMessageMapOnSuccessForKey: key)
+                }
             }
         })
     }
@@ -175,6 +204,37 @@ final class ChatViewController: JSQMessagesViewController {
         itemRef.updateChildValues(["photoURL": url])
     }
     
+    private func fetchImageDataAtURL(photoURL: String, forMediaItem mediaItem: JSQPhotoMediaItem, clearsPhotoMessageMapOnSuccessForKey key: String?) {
+        let storageRef = FIRStorage.storage().referenceForURL(photoURL)
+        
+        storageRef.dataWithMaxSize(INT64_MAX, completion: { (data, error) in
+            if let error = error {
+                print("Error downloading image data: \(error)")
+                return
+            }
+            
+            storageRef.metadataWithCompletion({ (metadata, merr) in
+                if let err = merr {
+                    print("Error Downloading metadata: \(err)")
+                    return
+                }
+                
+                if metadata!.contentType == "image/gif" {
+                    // GIF Image
+                } else {
+                    mediaItem.image = UIImage(data: data!)
+                }
+                
+                self.collectionView?.reloadData()
+                
+                guard key != nil else {
+                    return
+                }
+                self.photoMessageMap.removeValueForKey(key!)
+            })
+        })
+    }
+    
     private func setupOutgoingBubble() -> JSQMessagesBubbleImage {
         let bf = JSQMessagesBubbleImageFactory()
         return bf.outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleBlueColor())
@@ -196,6 +256,18 @@ final class ChatViewController: JSQMessagesViewController {
     private func addMessage(withId: String, name: String, text: String) {
         if let message = JSQMessage(senderId: withId, displayName: name, text: text) {
             messages.append(message)
+        }
+    }
+    
+    private func addPhotoMessage(withId id: String, key: String, mediaItem: JSQPhotoMediaItem) {
+        if let message = JSQMessage(senderId: id, displayName: "", media: mediaItem) {
+            messages.append(message)
+            
+            if mediaItem.image == nil {
+                photoMessageMap[key] = mediaItem
+            }
+            
+            collectionView?.reloadData()
         }
     }
 }
@@ -223,6 +295,22 @@ extension ChatViewController: UIImagePickerControllerDelegate, UINavigationContr
             }
         } else {
             // Handle photo picking from Camera
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            if let key = sendPhotoMessage() {
+                let imageData = UIImageJPEGRepresentation(image, 1.0)
+                let imagePath = (FIRAuth.auth()!.currentUser?.uid)! + "\(Int(NSDate.timeIntervalSinceReferenceDate()*1000)).jpg"
+                let metadata = FIRStorageMetadata()
+                metadata.contentType = "image/jpeg"
+                
+                storageRef.child(imagePath).putData(imageData!, metadata: metadata) { (metadata, error) in
+                    if let error = error {
+                        print("Error uploading photo: \(error)")
+                        return
+                    }
+                    
+                    self.setImageURL(self.storageRef.child((metadata?.path)!).description, forPhotoMessageWithKey: key)
+                }
+            }
         }
     }
     
